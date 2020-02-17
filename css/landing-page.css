@@ -37,8 +37,9 @@ h6 {
 
 /* Bootstrap base elements */
 
-
-/*Checkboxes styles*/
+.btn {
+    border-radius: 0 !important;
+}
 
 .btn-dark {
     height: 45px;
@@ -592,7 +593,7 @@ header.masthead .arrow {
 
 .map .map-image {
     width: 100%;
-    height: 307px;
+    height: 18em;
     background-image: url("../img/mapa.png");
     background-position: center center;
     background-repeat: no-repeat;
@@ -607,8 +608,8 @@ header.masthead .arrow {
     overflow: hidden;
 }
 
-.map .map-image .container-fluid .col-md-12 {
-    padding-top: 1rem;
+.map .map-image .container-fluid .col-lg-12 {
+    padding-top: 3rem;
 }
 
 .map .map-image .timeline {
@@ -660,7 +661,7 @@ header.masthead .arrow {
     text-transform: none;
 }
 
-.map .map-image .status h2 {
+.map .map-image .status h1 {
     font-family: 'FasterThanStencil';
     font-size: 46px;
     font-weight: normal;
@@ -673,7 +674,7 @@ header.masthead .arrow {
     padding-top: 1rem;
 }
 
-.map .map-image .status h2:before {
+.map .map-image .status h1:before {
     content: '\A';
     white-space: pre;
     display: block;
@@ -723,7 +724,7 @@ header.masthead .arrow {
     width: 100%;
     background-color: #fafafa;
     padding-top: 4rem;
-    padding-bottom: 7rem;
+    padding-bottom: 5rem;
     position: relative;
     overflow: hidden;
 }
@@ -742,7 +743,8 @@ header.masthead .arrow {
     opacity: 0.3;
 }
 
-.form .container-incription:before {
+.form .container.container-incription:before,
+.form .container.container-success:before {
     content: "";
     width: 34em;
     height: 87em;
@@ -752,7 +754,7 @@ header.masthead .arrow {
     background-size: contain;
     position: absolute;
     top: 0;
-    right: -8em;
+    right: -6em;
 }
 
 .form .container h1 {
@@ -771,10 +773,6 @@ header.masthead .arrow {
 .form .container .title {
     border-bottom: 1px solid #101010;
     margin-bottom: 1em;
-}
-
-.form .container .title.title-data {
-    padding-top: 3em;
 }
 
 .form .container .inputs {
@@ -815,6 +813,10 @@ header.masthead .arrow {
     padding-bottom: 3em;
 }
 
+.form .container .submit {
+    padding-top: 2rem;
+}
+
 .form .container .submit .btn-dark {
     font-weight: normal;
     font-stretch: normal;
@@ -823,6 +825,14 @@ header.masthead .arrow {
     letter-spacing: normal;
     text-align: center;
     color: #fafafa;
+}
+
+.form .container .data {
+    padding-top: 2rem;
+}
+
+.form .container .data .container {
+    padding-top: 2rem;
 }
 
 .form .container .data .table td {
@@ -838,6 +848,10 @@ header.masthead .arrow {
     letter-spacing: normal;
     color: #101010;
     width: 10%;
+}
+
+.form .container .data-table .title-data {
+    border-bottom: 1px solid #f26b32;
 }
 
 .form .container .data .btn-dark,
@@ -856,6 +870,50 @@ header.masthead .arrow {
 .form .container .data .btn-light {
     color: #101010;
     border: solid 1px #101010;
+}
+
+.form .container-success {
+    padding: 6em;
+    padding-top: 2em;
+}
+
+.form .container-success .logo-buttom {
+    width: 100%;
+    height: 15.2rem;
+}
+
+.form .container-success .d-flex {
+    position: relative;
+}
+
+.form .container-success .d-flex h1 {
+    height: 44px;
+    text-align: left;
+}
+
+.form .container-success .d-flex .success-title {
+    font-family: 'AdihausDIN-Cn';
+    font-size: 44px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.55;
+    letter-spacing: normal;
+    color: #101010;
+    text-transform: uppercase;
+    margin-top: unset;
+}
+
+.form .container-success .d-flex .success-message {
+    font-size: 44px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #101010;
+    text-transform: uppercase;
+    margin-bottom: 0;
 }
 
 .call-to-action {
