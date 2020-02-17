@@ -1,0 +1,878 @@
+/*
+ * Adidas Speed Runners 2020 - Landing Page v1.0.0
+ * Copyright 2020 Ris3TwO
+ * Licensed under MIT (https://github.com/ris3two/speedrunners-landing-page/blob/master/LICENSE)
+ */
+
+@font-face {
+    font-family: 'AdihausDIN-Cn';
+    src: url('../fonts/AdihausDIN-Cn.woff') format('woff'), url('../fonts/AdihausDIN-Cn.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'AdihausDIN-CondMedium';
+    src: url('../fonts/AdihausDIN-CondMedium.woff') format('woff'), url('../fonts/AdihausDIN-CondMedium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'FasterThanStencil';
+    src: url('../fonts/SS20_BBFT_TYPEFONT_STENCIL.woff') format('woff'), url('../fonts/SS20_BBFT_TYPEFONT_STENCIL.ttf') format('truetype');
+}
+
+body {
+    font-family: 'AdihausDIN-Cn', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #fafafa;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+
+
+/* Bootstrap base elements */
+
+
+/*Checkboxes styles*/
+
+.btn-dark {
+    height: 45px;
+    font-size: 22px;
+    background-color: #101010;
+    text-transform: uppercase;
+}
+
+.btn-light {
+    background-color: #f8f9fa6e !important;
+    padding: 0.55rem;
+    margin: auto;
+}
+
+.btn-light:not(:disabled):not(.disabled).active {
+    color: #101010 !important;
+    border-color: transparent;
+}
+
+.form .container .inputs .btn-group>.btn-group:not(:first-child)>.btn,
+.btn-group>.btn:not(:first-child) {
+    border: 0;
+}
+
+.btn-light.focus {
+    box-shadow: none;
+}
+
+.form-row-space {
+    padding-bottom: 1rem;
+}
+
+.form-control {
+    border: 1px solid #101010;
+    border-radius: 0;
+    font-size: 16px;
+    text-transform: uppercase;
+    height: calc(1.5em + .75rem + 10px);
+    -webkit-transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    -ms-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #101010;
+    /* border: 2px solid #101010; */
+    border-width: 2px;
+    outline: 0;
+    /* box-shadow: 0 0 0 0.2rem rgba(8, 8, 8, 0.25); */
+    box-shadow: none;
+}
+
+.form-group>label {
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #101010;
+}
+
+.form-group>.float-label {
+    position: absolute;
+    top: -0.6rem;
+    left: 1rem;
+    background-color: white;
+    padding-left: .35rem;
+    padding-right: .55rem;
+}
+
+.form-group>.float-label-2 {
+    transform: translate(1rem, 0.6rem);
+}
+
+.form-group small {
+    padding-left: 1.5rem;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: #101010 !important;
+}
+
+.form-group.col-inactive {
+    display: none;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.span_pseudo,
+.form-check span:before,
+.form-check span:after {
+    content: "";
+    display: inline-block;
+    background: #fff;
+    width: 0;
+    height: 0.2rem;
+    position: absolute;
+    transform-origin: 0% 0%;
+}
+
+.form-check {
+    position: relative;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.form-check input:checked~span {
+    background: #101010;
+    border-color: #101010;
+}
+
+.form-check input:checked~span:before {
+    width: 1rem;
+    height: 0.15rem;
+    transition: width 0.1s;
+    transition-delay: 0.3s;
+}
+
+.form-check input:checked~span:after {
+    width: 0.4rem;
+    height: 0.15rem;
+    transition: width 0.1s;
+    transition-delay: 0.2s;
+}
+
+.form-check input:disabled~span {
+    background: #ececec;
+    border-color: #dcdcdc;
+}
+
+.form-check input:disabled~label {
+    color: #dcdcdc;
+}
+
+.form-check input:disabled~label:hover {
+    cursor: default;
+}
+
+.form-check label {
+    padding-left: 2rem;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    color: #101010;
+}
+
+.form-check span {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 2px solid #101010;
+    position: absolute;
+    transition: all 0.2s;
+    z-index: 1;
+    box-sizing: content-box;
+}
+
+.form-check span:before {
+    transform: rotate(-55deg);
+    top: 1rem;
+    left: 0.37rem;
+}
+
+.form-check span:after {
+    transform: rotate(35deg);
+    bottom: 0.35rem;
+    left: 0.2rem;
+}
+
+.form-check a {
+    color: #101010;
+    text-decoration: underline;
+}
+
+.form-check a:hover {
+    color: #212529;
+    text-decoration: none;
+}
+
+
+/* Header */
+
+header.masthead {
+    position: relative;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0%, rgba(250, 250, 250, 0.5) 50%, rgba(216, 216, 216, 0.55) 100%);
+    /* background: url("../img/bg-masthead.jpg") no-repeat center center; */
+    /* background-size: cover; */
+    /* padding-top: 8rem; */
+    padding-bottom: 8rem;
+}
+
+header.masthead .aviones {
+    background-image: url("../img/aviones.svg");
+    background-repeat: no-repeat;
+    padding: 0;
+    top: -1.5rem;
+    left: -2rem;
+    width: 100%;
+    height: 152px;
+    position: absolute;
+}
+
+header.masthead .overlay {
+    position: absolute;
+    background-color: #212529;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+}
+
+header.masthead h1 {
+    font-size: 2rem;
+}
+
+header.masthead .logo {
+    width: 100%;
+    height: 174px;
+    /* margin-left: 30%; */
+}
+
+header.masthead .col-xl-3 {
+    padding-top: 7rem;
+    padding-right: 4rem;
+    text-align: center;
+    vertical-align: middle;
+    padding-left: 4rem;
+}
+
+header.masthead .col-xl-3 .container .btn-dark {
+    margin-top: 4.5rem;
+}
+
+header.masthead .col-xl-7 {
+    padding-top: 4rem;
+    padding-right: 0;
+}
+
+header.masthead .video-thumbnail {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    height: 350px;
+    border: solid 3px #fafafa;
+}
+
+header.masthead .video-thumbnail img {
+    width: 100%;
+    height: 340px;
+}
+
+header.masthead .video-thumbnail:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    content: "\f144";
+    font-family: "Font Awesome 5 Free";
+    font-size: 65px;
+    color: #101010;
+    opacity: .8;
+    text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+}
+
+header.masthead .arrow {
+    background-image: url("../img/arrow.png");
+    background-repeat: no-repeat;
+    right: 6.5rem;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 200;
+    transform: translate(0, 50%);
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    header.masthead {
+        /* padding-top: 12rem; */
+        padding-bottom: 4rem;
+    }
+    header.masthead h1 {
+        font-size: 3rem;
+    }
+}
+
+.description {
+    padding-top: 4rem;
+    position: relative;
+}
+
+.description:before {
+    content: "LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD";
+    position: absolute;
+    opacity: 0.05;
+    font-family: AdihausDIN-Cn;
+    font-size: 35px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: justify;
+    color: #101010;
+    top: 0;
+    left: 0;
+}
+
+.description .description-item {
+    max-width: 50rem;
+}
+
+.description .description-item h1 {
+    font-family: 'FasterThanStencil';
+    font-size: 70px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #f26b32;
+}
+
+.description .description-item p {
+    font-size: 30px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #101010;
+    text-transform: uppercase;
+}
+
+.description .container-fluid .last-description {
+    margin-bottom: -418px;
+}
+
+.description .container-fluid .last-description .col-lg-6 {
+    max-width: 100%;
+}
+
+.description .container-fluid .last-description .description-text {
+    margin-left: 3em;
+}
+
+.description .col-description {
+    padding: 3rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+
+.description .col-description.col-description-2 {
+    transform: translate(0, -220px);
+}
+
+.description .col-description.col-description-3 {
+    transform: translate(0, -420px);
+}
+
+.description .description-text {
+    /* padding: 3rem; */
+    text-align: justify;
+    color: #101010;
+    text-transform: uppercase;
+}
+
+.description .description-text h1 {
+    padding-top: 1rem;
+    font-size: 35px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+.description .description-text .col-md-12 {
+    padding-left: 2em;
+}
+
+.description .description-text .col-md-12 h1 {
+    padding-top: 0;
+}
+
+.description .description-text p {
+    font-size: 22px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+.description .description-img {
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: 4px solid #f8f8f8;
+    box-sizing: border-box;
+}
+
+.description .description-img.objetives {
+    padding-top: 18rem;
+}
+
+.description .description-img .tryouts {
+    width: 100%;
+    height: 20em;
+    background-image: url("../img/tryouts.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #464646;
+}
+
+.description .description-img .city {
+    background-image: url("../img/bogot.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 8em;
+    position: absolute;
+    top: 0.20rem;
+    left: 0;
+}
+
+.description .description-img .training {
+    width: 100%;
+    height: 20em;
+    background-image: url("../img/training.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #464646;
+}
+
+.description .description-img .k {
+    background-image: url("../img/42-k.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 8em;
+    position: absolute;
+    top: 0.80rem;
+    left: 1.6rem;
+}
+
+.description .description-img .objetive-1 {
+    width: 38em;
+    height: 18em;
+    background-image: url("../img/group-10.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 0;
+    left: 2em;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: 4px solid #f8f8f8;
+    z-index: 1;
+}
+
+.description .description-img .objetive-2 {
+    width: 20em;
+    height: 12em;
+    background-image: url("../img/group-11.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 19em;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: 4px solid #f8f8f8;
+    z-index: 2;
+}
+
+.description .description-img .objetive-3 {
+    width: 18em;
+    height: 30em;
+    background-image: url("../img/group-12.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: -76px;
+    left: -40px;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: 4px solid #f8f8f8;
+    z-index: 3;
+}
+
+@media (min-width: 1280px) {
+    .description .description-img .objetive-1 {
+        height: 18em;
+        margin-bottom: 0.2em;
+    }
+    .description .description-img .objetive-2 {
+        left: 17em;
+    }
+}
+
+.map {
+    width: 100%;
+    background-color: #f26b32;
+    padding-top: 2.5rem;
+    position: relative;
+}
+
+.map .container {
+    padding-bottom: 2rem;
+}
+
+.map .container h1 {
+    font-family: 'FasterThanStencil';
+    font-size: 65px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 3rem;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fafafa;
+}
+
+.map .map-image {
+    width: 100%;
+    height: 307px;
+    background-image: url("../img/mapa.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.map .map-image .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+    overflow: hidden;
+}
+
+.map .map-image .container-fluid .col-md-12 {
+    padding-top: 1rem;
+}
+
+.map .map-image .timeline {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    border-top: 3px solid #f26b32;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+.map .map-image .li {
+    transition: all 200ms ease-in;
+}
+
+.map .map-image .li.full {
+    padding-bottom: 2rem;
+}
+
+.map .map-image .status {
+    padding: 0px 6em;
+    display: flex;
+    position: relative;
+    transition: all 200ms ease-in;
+}
+
+.map .map-image .info {
+    padding-top: 0.5rem;
+}
+
+.map .map-image .info p {
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #101010;
+    text-transform: uppercase;
+}
+
+.map .map-image .info.space {
+    justify-content: space-between;
+}
+
+.map .map-image .info .site {
+    text-transform: none;
+}
+
+.map .map-image .status h2 {
+    font-family: 'FasterThanStencil';
+    font-size: 46px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.52;
+    letter-spacing: normal;
+    text-align: center;
+    color: #101010;
+    padding-top: 1rem;
+}
+
+.map .map-image .status h2:before {
+    content: '\A';
+    white-space: pre;
+    display: block;
+}
+
+.map .map-image .status:before {
+    content: "";
+    width: 26px;
+    height: 26px;
+    background-color: white;
+    border-radius: 25px;
+    border: 0.2rem solid #f26b32;
+    position: absolute;
+    top: -16px;
+    left: 45%;
+    transition: all 200ms ease-in;
+}
+
+.map .map-image .li.complete .status:before {
+    background-color: #fff;
+    border: 0.2rem solid #f26b32;
+    transition: all 200ms ease-in;
+}
+
+.map .map-image .li.complete .status h2 {
+    color: #101010;
+}
+
+@media (min-device-width: 320px) and (max-device-width: 700px) {
+    .map .map-image .timeline {
+        list-style-type: none;
+        display: block;
+    }
+    .map .map-image .li {
+        transition: all 200ms ease-in;
+        display: flex;
+        width: inherit;
+    }
+    .map .map-image .status:before {
+        left: -8%;
+        top: 30%;
+        transition: all 200ms ease-in;
+    }
+}
+
+.form {
+    width: 100%;
+    background-color: #fafafa;
+    padding-top: 4rem;
+    padding-bottom: 7rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.form:before {
+    content: "";
+    width: 53em;
+    height: 50em;
+    background-image: url("../img/aviones.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+    position: absolute;
+    top: -6em;
+    left: -9.2em;
+    opacity: 0.3;
+}
+
+.form .container-incription:before {
+    content: "";
+    width: 34em;
+    height: 87em;
+    background-image: url("../img/formulario-bg-ripped.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    right: -8em;
+}
+
+.form .container h1 {
+    height: 68px;
+    font-family: 'FasterThanStencil';
+    font-size: 65px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #101010;
+}
+
+.form .container .title {
+    border-bottom: 1px solid #101010;
+    margin-bottom: 1em;
+}
+
+.form .container .title.title-data {
+    padding-top: 3em;
+}
+
+.form .container .inputs {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.form .container .inputs .btn-group {
+    display: flex;
+    border: solid 1px #101010;
+}
+
+.form .container .inputs .btn-group .btn {
+    flex: 1;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #999999;
+}
+
+.form .container .inputs .btn-group>.btn-group:not(:first-child)>.btn,
+.btn-group>.btn:not(:first-child) {
+    border-left: solid 1px #101010 !important;
+}
+
+.form .container .inputs .btn-group>.btn-group:not(:last-child)>.btn,
+.btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
+    border-right: solid 1px #101010 !important;
+}
+
+.form .container .terms {
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-bottom: 3em;
+}
+
+.form .container .submit .btn-dark {
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.09;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fafafa;
+}
+
+.form .container .data .table td {
+    text-transform: uppercase;
+}
+
+.form .container .data .table .form-title {
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #101010;
+    width: 10%;
+}
+
+.form .container .data .btn-dark,
+.form .container .data .btn-light {
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fafafa;
+    text-transform: uppercase;
+}
+
+.form .container .data .btn-light {
+    color: #101010;
+    border: solid 1px #101010;
+}
+
+.call-to-action {
+    position: relative;
+    background-color: #343a40;
+    background: url("../img/bg-masthead.jpg") no-repeat center center;
+    background-size: cover;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.call-to-action .overlay {
+    position: absolute;
+    background-color: #212529;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+}
