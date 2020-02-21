@@ -518,10 +518,8 @@ header.masthead .arrow {
 
 .description .description-img .objetive-3 {
     position: absolute;
-    top: -76px;
-    left: -40px;
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 1;
+    border: 4px solid white;
 }
 
 @media (min-width: 1280px) {
@@ -797,8 +795,50 @@ header.masthead .arrow {
     padding-top: 2rem;
 }
 
-.form .container .data .container {
-    padding-top: 2rem;
+.form .container .data .datatable .form-title {
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #101010;
+    text-transform: uppercase;
+}
+
+.form .container .data .datatable .form-data {
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.form .container .data .row.datatable {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+.form .container .data .row.datatable .col-sm-6 {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.form .container .data .row.datatable .col-md-5,
+.form .container .data .row.datatable .col-md-11 {
+    padding-left: 1rem;
+}
+
+.form .container .data .row.datatable .col-sm-6.form-last {
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 2rem;
+}
+
+.form .container .data .row .col-sm-6.form-title {
+    width: 30% !important;
+}
+
+.form .container .data .row .col-sm-6.form-data {
+    width: 70% !important;
 }
 
 .form .container .data .table td {
@@ -953,8 +993,9 @@ header.masthead .arrow {
     .description .description-item p {
         font-size: 20px;
     }
-    .description .description-img .tryouts {
-        max-width: 100%;
+    .description .description-img .tryouts,
+    .description .description-img .training {
+        max-width: 375px;
     }
     .description .description-img .city {
         max-width: 251px;
@@ -1183,9 +1224,13 @@ header.masthead .arrow {
         padding-bottom: 0.2rem;
         line-height: 2.5rem;
     }
+    .form .information .data .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
     .form .information .data .container .row {
-        margin-left: -35px;
-        margin-right: -35px;
+        margin-left: 0;
+        margin-right: 0;
     }
     .form .information .data .container .col-sm-3 {
         width: 50%;
@@ -1195,6 +1240,10 @@ header.masthead .arrow {
     }
     .form .information .data .container .col-sm-3 .btn {
         padding-top: 0.60rem;
+    }
+    .form .information .data .row.datatable .col-sm-6 {
+        padding-bottom: .20rem;
+        padding-top: .40rem;
     }
     .form .container-success {
         padding: 2em;
@@ -1263,48 +1312,6 @@ header.masthead .arrow {
     header.masthead h1 {
         font-size: 3rem;
     }
-    .description .description-img .training {
-        max-width: 100%;
-    }
-    .description .description-img .training img {
-        height: auto;
-    }
-    .map .container h1 {
-        font-size: 45px;
-        line-height: 0.9;
-    }
-    .form .information .data .container .col-sm-3 .btn-block {
-        max-width: 100%;
-    }
-    .form .information .data .container .col-sm-3 .btn {
-        padding-top: 0.55rem;
-    }
-    @-webkit-keyframes slide-left {
-        0% {
-            -webkit-transform: translateX(0);
-            transform: translateX(0);
-        }
-        100% {
-            -webkit-transform: translateX(-700px);
-            transform: translateX(-700px);
-        }
-    }
-    @keyframes slide-left {
-        0% {
-            -webkit-transform: translateX(0);
-            transform: translateX(0);
-        }
-        100% {
-            -webkit-transform: translateX(-700px);
-            transform: translateX(-700px);
-        }
-    }
-}
-
-
-/* Large devices (desktops, 992px and up) */
-
-@media (min-width: 992px) {
     header.masthead .logo {
         width: 100%;
         height: 234px;
@@ -1313,7 +1320,173 @@ header.masthead .arrow {
         background-position: center center;
         background-repeat: no-repeat;
         background-size: contain;
+        overflow: hidden;
     }
+    header.masthead .col-xl-3 .row {
+        margin-left: 0;
+    }
+    header.masthead .col-xl-3 .container {
+        transform: translateY(510px);
+        padding-right: 1rem;
+    }
+    header.masthead .col-xl-3 .container .btn-dark {
+        margin-top: 4.5rem;
+        height: 50px;
+    }
+    header.masthead .arrow {
+        right: 1.2rem;
+        transform: translate(0, 50%);
+    }
+    .description::before {
+        content: "LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD";
+        font-size: 32px;
+    }
+    .description .description-item h1 {
+        font-size: 58px;
+    }
+    .description .description-item p {
+        font-size: 30px;
+    }
+    .description .description-text h1 {
+        font-size: 38px;
+    }
+    .description .description-text p {
+        font-size: 22px;
+    }
+    .description .description-img .training {
+        max-width: 100%;
+    }
+    .description .description-img .training img {
+        height: auto;
+    }
+    .description .description-img.objetives {
+        padding-top: 14rem;
+    }
+    .description .description-img .objetive-1 {
+        max-width: 450px;
+    }
+    .description .description-img .objetive-2 {
+        max-width: 322px;
+    }
+    .description .description-img .objetive-3 {
+        max-width: 240px;
+        z-index: 4;
+    }
+    .map .map-image {
+        height: 360px;
+    }
+    .map .map-image .container-fluid .row {
+        margin-right: 15px;
+    }
+    .map .container h1 {
+        font-size: 45px;
+        line-height: 0.9;
+    }
+    .map .map-image .timeline {
+        border-top: 3px solid #f26b32;
+        padding-left: 5rem;
+    }
+    .map .map-image .li {
+        float: left;
+        border-left: none;
+    }
+    .map .map-image .li:first-child {
+        padding-top: 0;
+        margin-top: -28px;
+    }
+    .map .map-image .li:nth-last-child(2) {
+        margin-top: -28px;
+    }
+    .map .map-image .li:nth-last-child(1) {
+        margin-top: -44px;
+        padding-bottom: 0 !important;
+    }
+    .map .map-image .li.full {
+        padding-bottom: 0;
+    }
+    .map .map-image .status {
+        padding: 0px 3em;
+        padding-left: 2em;
+    }
+    .map .map-image .status h1 {
+        font-size: 38px;
+    }
+    .map .map-image .status::before {
+        top: -28%;
+        left: 34%;
+    }
+    .map .map-image .full .status::before {
+        top: -28%;
+        left: 34%;
+    }
+    .map .map-image .status.status-last::before {
+        top: -28%;
+        left: 34%;
+    }
+    .map .map-image .info {
+        text-align: left;
+        padding-left: 2rem;
+    }
+    .map .map-image .info p {
+        font-size: 22px;
+    }
+    .map .map-image .info.space .px-3 {
+        padding-left: 0 !important;
+    }
+    .form {
+        padding-top: 24rem;
+    }
+    .form::before {
+        background-image: url("../img/aviones.png");
+        top: 18em;
+        left: -8.6em;
+        opacity: 0.3;
+    }
+    .form .container.container-incription::before,
+    .form .container.container-success::before {
+        height: 370px;
+        top: 8px;
+    }
+    .form .information .data .container .col-sm-3 .btn-block {
+        max-width: 100%;
+    }
+    .form .information .data .container .col-sm-3 .btn {
+        padding-top: 0.55rem;
+    }
+    .form .information .data .container .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .form .container .data .row.datatable .col-md-5,
+    .form .container .data .row.datatable .col-md-11 {
+        padding-left: 3rem;
+    }
+    @-webkit-keyframes slide-left {
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        100% {
+            -webkit-transform: translateX(-660px);
+            transform: translateX(-660px);
+        }
+    }
+    @keyframes slide-left {
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        100% {
+            -webkit-transform: translateX(-660px);
+            transform: translateX(-660px);
+        }
+    }
+}
+
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
     .map .container h1 {
         font-size: 65px;
         line-height: 0.9;
@@ -1337,6 +1510,26 @@ header.masthead .arrow {
         position: absolute;
         top: 0;
         right: -6em;
+    }
+    @-webkit-keyframes slide-left {
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        100% {
+            -webkit-transform: translateX(-700px);
+            transform: translateX(-700px);
+        }
+    }
+    @keyframes slide-left {
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        100% {
+            -webkit-transform: translateX(-700px);
+            transform: translateX(-700px);
+        }
     }
 }
 
@@ -1586,14 +1779,15 @@ header.masthead .arrow {
         transform: translate(0, -180px);
     }
     .description .description-img .objetive-3 {
-        transform: translateY(-276px);
+        transform: translate(-54px, -343px);
+        max-width: 295px;
     }
     .description .description-img.objetives {
         padding-top: 1rem;
     }
     .description .description-img .objetive-2 {
         max-width: 356px;
-        transform: translate(58px, -224px);
+        transform: translate(68px, -232px);
     }
     .form .container.container-incription::before,
     .form .container.container-success::before {
