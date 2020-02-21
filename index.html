@@ -28,7 +28,7 @@
         <div class="aviones"></div>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xl-3 col-md-auto offset-xl-1">
+                <div class="col-xl-3 col-md-12 offset-xl-1">
                     <div class="logo img-fluid slide-left"></div>
                     <div class="row justify-content-center">
                         <div class="container align-middle">
@@ -206,72 +206,65 @@
                                 </div>
                             </div>
                             <div class="form-group form-radio col-md-6">
-                                <label class="float-label-2" for="selectGender">GÉNERO</label>
-                                <div id="selectGender" class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="float-label-2">GÉNERO</label>
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                     <label class="btn btn-light active">
-                                        <input type="radio" name="options" id="option1" autocomplete="off" checked> HOMBRE
+                                        <input type="radio" name="options" id="male" checked> MASCULINO
                                     </label>
                                     <label class="btn btn-light">
-                                        <input type="radio" name="options" id="option2" autocomplete="off"> MUJER
+                                        <input type="radio" name="options" id="female"> FEMENINO
                                     </label>
                                     <label class="btn btn-light">
-                                        <input type="radio" name="options" id="option3" autocomplete="off"> OTRO
-                                    </label>
-                                </div>
-                            </div>
-                            <!-- <div class="form-group col-md-6">
-                                <label class="float-label" for="inputCity">CIUDAD</label>
-                                <input type="text" class="form-control" id="inputCity" aria-describedby="cityHelp" placeholder="">
-                                <div class="invalid-feedback">
-                                    <small id="cityHelp" class="form-text">Falta registrar la ciudad *</small>
-                                </div>
-                            </div> -->
-                        </div>
-                        <div class="form-row justify-content-around break">
-                            <div class="form-group form-radio col-md-6">
-                                <label class="float-label-2" for="selectAge">EDAD</label>
-                                <div id="selectAge" class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-light active">
-                                        <input type="radio" name="options" id="option1" autocomplete="off"> 18 - 25
-                                    </label>
-                                    <label class="btn btn-light">
-                                        <input type="radio" name="options" id="option2" autocomplete="off"> 24 - 34
-                                    </label>
-                                    <label class="btn btn-light">
-                                        <input type="radio" name="options" id="option3" autocomplete="off" checked> 35 - 40
-                                    </label>
-                                    <label class="btn btn-light">
-                                        <input type="radio" name="options" id="option3" autocomplete="off"> 41 - 45
-                                    </label>
-                                    <label class="btn btn-light">
-                                        <input type="radio" name="options" id="option3" autocomplete="off"> 46 +
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="form-group form-radio col-md-6">
-                                <label class="float-label-2" for="selectShoes">ZAPATILLAS</label>
-                                <div id="selectShoes" class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-light active">
-                                        <input type="radio" name="options" id="option1" autocomplete="off" checked> ADIDAS
-                                    </label>
-                                    <label class="btn btn-light">
-                                        <input type="radio" name="options" id="option2" autocomplete="off"> REEBOK
-                                    </label>
-                                    <label class="btn btn-light">
-                                        <input type="radio" name="options" id="option3" autocomplete="off"> OTRAS
+                                        <input type="radio" name="options" id="other"> OTRO
                                     </label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-row justify-content-around break">
                             <div class="form-group form-radio col-md-6">
-                                <label class="float-label-2" for="selectTeam">TEAM</label>
-                                <div id="selectTeam" class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="float-label-2">EDAD</label>
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                     <label class="btn btn-light active">
-                                        <input type="radio" name="options" id="option1" autocomplete="off" checked> ADIDAS RUNNERS
+                                        <input type="radio" name="options" id="18-25"> 18 - 25
                                     </label>
                                     <label class="btn btn-light">
-                                        <input type="radio" name="options" id="option2" autocomplete="off"> OTRO
+                                        <input type="radio" name="options" id="24-34"> 24 - 34
+                                    </label>
+                                    <label class="btn btn-light">
+                                        <input type="radio" name="options" id="35-40" checked> 35 - 40
+                                    </label>
+                                    <label class="btn btn-light">
+                                        <input type="radio" name="options" id="41-45"> 41 - 45
+                                    </label>
+                                    <label class="btn btn-light">
+                                        <input type="radio" name="options" id="46+"> 46 +
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group form-radio col-md-6">
+                                <label class="float-label-2">ZAPATILLAS</label>
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-light active">
+                                        <input type="radio" name="options" id="shoes1" checked> ADIDAS
+                                    </label>
+                                    <label class="btn btn-light">
+                                        <input type="radio" name="options" id="shoes2"> REEBOK
+                                    </label>
+                                    <label class="btn btn-light">
+                                        <input type="radio" name="options" id="shoes3"> OTRAS
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row justify-content-around break">
+                            <div class="form-group form-radio col-md-6">
+                                <label class="float-label-2">TEAM</label>
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-light active">
+                                        <input type="radio" name="options" id="team1" checked> ADIDAS RUNNERS
+                                    </label>
+                                    <label class="btn btn-light">
+                                        <input type="radio" name="options" id="team2"> OTRO
                                     </label>
                                 </div>
                             </div>
@@ -280,32 +273,32 @@
                                 <input type="text" class="form-control" id="inputTeam" placeholder="">
                             </div>
                             <div class="form-group form-radio col-md-6">
-                                <label class="float-label-2" for="exampleInputEmail1">DISTANCIA</label>
+                                <label class="float-label-2">DISTANCIA</label>
                                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                     <label class="btn btn-light active">
-                                        <input type="radio" name="options" id="option1" autocomplete="off" checked> 10 K
+                                        <input type="radio" name="options" id="distance1" checked> 10 K
                                     </label>
                                     <label class="btn btn-light">
-                                        <input type="radio" name="options" id="option2" autocomplete="off"> 21 K
+                                        <input type="radio" name="options" id="distance2"> 21 K
                                     </label>
                                     <label class="btn btn-light">
-                                        <input type="radio" name="options" id="option3" autocomplete="off"> 42 K
+                                        <input type="radio" name="options" id="distance3"> 42 K
                                     </label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-row justify-content-around">
                             <div class="form-group form-radio col-md-12">
-                                <label class="float-label-2" for="exampleInputEmail1">MI MEJOR TIEMPO</label>
+                                <label class="float-label-2">MI MEJOR TIEMPO</label>
                                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                     <label class="btn btn-light active">
-                                        <input type="radio" name="options" id="option1" autocomplete="off"> 30 MIN
+                                        <input type="radio" name="options" id="time1"> 30 MIN
                                     </label>
                                     <label class="btn btn-light">
-                                        <input type="radio" name="options" id="option2" autocomplete="off"> 60 MIN
+                                        <input type="radio" name="options" id="time2"> 60 MIN
                                     </label>
                                     <label class="btn btn-light">
-                                        <input type="radio" name="options" id="option2" autocomplete="off"> 90 MIN
+                                        <input type="radio" name="options" id="time3"> 90 MIN
                                     </label>
                                 </div>
                             </div>

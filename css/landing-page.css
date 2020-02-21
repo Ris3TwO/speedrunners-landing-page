@@ -667,7 +667,7 @@ header.masthead .arrow {
     color: #101010;
 }
 
-@media (min-device-width: 360px) and (max-device-width: 700px) {
+@media only screen and (min-width: 360px) and (max-width: 700px) {
     .map .map-image .timeline {
         list-style-type: none;
         display: block;
@@ -675,7 +675,6 @@ header.masthead .arrow {
     .map .map-image .li {
         transition: all 200ms ease-in;
         display: inline;
-        width: inherit;
     }
     .map .map-image .status:before {
         left: -8%;
@@ -923,7 +922,7 @@ header.masthead .arrow {
 }
 
 
-/* Small devices (landscape phones, 576px and up) */
+/* Small devices (landscape phones, 360px and up) */
 
 @media only screen and (min-width: 360px) {
     /* Header */
@@ -995,7 +994,7 @@ header.masthead .arrow {
     }
     .description .description-img .tryouts,
     .description .description-img .training {
-        max-width: 375px;
+        max-width: 550px;
     }
     .description .description-img .city {
         max-width: 251px;
@@ -1269,22 +1268,22 @@ header.masthead .arrow {
     }
     @-webkit-keyframes slide-left {
         0% {
-            -webkit-transform: translateX(100px);
-            transform: translateX(100px);
+            -webkit-transform: translateY(100px);
+            transform: translateY(100px);
         }
         100% {
-            -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+            -webkit-transform: translateY(0px);
+            transform: translateY(0px);
         }
     }
     @keyframes slide-left {
         0% {
-            -webkit-transform: translateX(100px);
-            transform: translateX(100px);
+            -webkit-transform: translateY(100px);
+            transform: translateY(100px);
         }
         100% {
-            -webkit-transform: translateX(0px);
-            transform: translateX(0px);
+            -webkit-transform: translateY(0px);
+            transform: translateY(0px);
         }
     }
 }
@@ -1315,19 +1314,20 @@ header.masthead .arrow {
     header.masthead .logo {
         width: 100%;
         height: 234px;
-        margin-left: 700px;
         background-image: url("../img/logo.png");
         background-position: center center;
         background-repeat: no-repeat;
         background-size: contain;
         overflow: hidden;
     }
+    header.masthead .col-md-12 {
+        padding-right: 0;
+    }
     header.masthead .col-xl-3 .row {
-        margin-left: 0;
+        margin-right: 0;
     }
     header.masthead .col-xl-3 .container {
         transform: translateY(510px);
-        padding-right: 1rem;
     }
     header.masthead .col-xl-3 .container .btn-dark {
         margin-top: 4.5rem;
@@ -1353,6 +1353,7 @@ header.masthead .arrow {
     .description .description-text p {
         font-size: 22px;
     }
+    .description .description-img .tryouts,
     .description .description-img .training {
         max-width: 100%;
     }
@@ -1374,9 +1375,6 @@ header.masthead .arrow {
     }
     .map .map-image {
         height: 360px;
-    }
-    .map .map-image .container-fluid .row {
-        margin-right: 15px;
     }
     .map .container h1 {
         font-size: 45px;
@@ -1463,22 +1461,22 @@ header.masthead .arrow {
     }
     @-webkit-keyframes slide-left {
         0% {
-            -webkit-transform: translateX(0);
-            transform: translateX(0);
+            -webkit-transform: translateY(360px);
+            transform: translateY(360px);
         }
         100% {
-            -webkit-transform: translateX(-660px);
-            transform: translateX(-660px);
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
         }
     }
     @keyframes slide-left {
         0% {
-            -webkit-transform: translateX(0);
-            transform: translateX(0);
+            -webkit-transform: translateY(360px);
+            transform: translateY(360px);
         }
         100% {
-            -webkit-transform: translateX(-660px);
-            transform: translateX(-660px);
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
         }
     }
 }
@@ -1487,6 +1485,12 @@ header.masthead .arrow {
 /* Large devices (desktops, 992px and up) */
 
 @media (min-width: 992px) {
+    .row {
+        margin-right: -15px;
+    }
+    header.masthead .logo {
+        margin-left: 700px;
+    }
     .map .container h1 {
         font-size: 65px;
         line-height: 0.9;
@@ -1755,7 +1759,7 @@ header.masthead .arrow {
         background-repeat: no-repeat;
         background-position: right;
         background-size: contain;
-        position: cover;
+        position: absolute;
     }
     .form .container-success .d-flex .success-title {
         font-size: 44px;
