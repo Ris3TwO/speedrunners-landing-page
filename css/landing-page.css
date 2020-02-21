@@ -320,11 +320,21 @@ header.masthead .video-thumbnail .youtube .play {
 
 header.masthead .video-thumbnail .youtube .play:before {
     position: absolute;
-    font-family: 'Font Awesome 5 Free';
-    content: "\f144";
-    font-size: 65px;
+    content: "\25b6";
+    font-size: 38px;
     color: #000;
     opacity: 0.8;
+    width: 65px;
+    height: 65px;
+    margin: 0 auto;
+    padding: 0.1em 0.4em;
+    border-style: solid;
+    border-radius: 50%;
+    background-color: rgba(216, 216, 216, 0.55);
+}
+
+header.masthead .video-thumbnail .youtube .play:hover::before {
+    opacity: 1;
 }
 
 header.masthead .video-thumbnail iframe,
@@ -923,7 +933,7 @@ header.masthead .arrow {
     }
     header.masthead .video-thumbnail .youtube .play {
         margin-left: -68px;
-        margin-top: -50px;
+        margin-top: -36px;
     }
     header.masthead .video-thumbnail iframe,
     header.masthead .video-thumbnail object,
@@ -1563,6 +1573,12 @@ header.masthead .arrow {
 /* HD devices (large desktops, 1440px and up) */
 
 @media only screen and (min-width: 1440px) {
+    header.masthead .col-xl-3 .container .btn-dark {
+        margin-top: 10rem;
+    }
+    header.masthead .arrow {
+        right: 5.7rem;
+    }
     .description .col-description {
         padding-left: 5rem;
     }
