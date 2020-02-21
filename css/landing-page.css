@@ -1,7 +1,6 @@
 /*
  * Adidas Speed Runners 2020 - Landing Page v1.0.0
  * Copyright 2020 Ris3TwO
- * Licensed under MIT (https://github.com/ris3two/speedrunners-landing-page/blob/master/LICENSE)
  */
 
 @font-face {
@@ -46,6 +45,13 @@ h6 {
     font-size: 22px;
     background-color: #101010;
     text-transform: uppercase;
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-light:hover,
+.btn-light:focus {
+    background-color: #f26b32;
 }
 
 .btn-light {
@@ -111,8 +117,8 @@ h6 {
     top: -0.6rem;
     left: 1rem;
     background-color: white;
-    padding-left: .35rem;
-    padding-right: .55rem;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 .form-group>.float-label-2 {
@@ -242,11 +248,8 @@ input[type="checkbox"] {
 
 header.masthead {
     position: relative;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0%, rgba(250, 250, 250, 0.5) 50%, rgba(216, 216, 216, 0.55) 100%);
-    /* background: url("../img/bg-masthead.jpg") no-repeat center center; */
-    /* background-size: cover; */
-    /* padding-top: 8rem; */
-    padding-bottom: 8rem;
+    width: 100%;
+    background-color: #ffffff !important;
 }
 
 header.masthead .aviones {
@@ -260,7 +263,8 @@ header.masthead .aviones {
     position: absolute;
 }
 
-header.masthead .overlay {
+
+/* header.masthead .overlay {
     position: absolute;
     background-color: #212529;
     height: 100%;
@@ -268,16 +272,10 @@ header.masthead .overlay {
     top: 0;
     left: 0;
     opacity: 0.3;
-}
+} */
 
 header.masthead h1 {
     font-size: 2rem;
-}
-
-header.masthead .logo {
-    width: 100%;
-    height: 174px;
-    /* margin-left: 30%; */
 }
 
 header.masthead .col-xl-3 {
@@ -295,33 +293,47 @@ header.masthead .col-xl-3 .container .btn-dark {
 header.masthead .col-xl-7 {
     padding-top: 4rem;
     padding-right: 0;
+    transform: none;
 }
 
 header.masthead .video-thumbnail {
     position: relative;
-    cursor: pointer;
-    width: 100%;
-    height: 350px;
+    padding-bottom: 56.25%;
+    /* IE6 workaround*/
+    height: 0;
+    overflow: hidden;
     border: solid 3px #fafafa;
 }
 
-header.masthead .video-thumbnail img {
+header.masthead .video-thumbnail .youtube {
     width: 100%;
-    height: 340px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
 }
 
-header.masthead .video-thumbnail:before {
+header.masthead .video-thumbnail .youtube .play {
+    position: relative;
+    background: none;
+}
+
+header.masthead .video-thumbnail .youtube .play:before {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
+    font-family: 'Font Awesome 5 Free';
     content: "\f144";
-    font-family: "Font Awesome 5 Free";
     font-size: 65px;
-    color: #101010;
-    opacity: .8;
-    text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+    color: #000;
+    opacity: 0.8;
+}
+
+header.masthead .video-thumbnail iframe,
+header.masthead .video-thumbnail object,
+header.masthead .video-thumbnail embed {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 header.masthead .arrow {
@@ -337,23 +349,12 @@ header.masthead .arrow {
     cursor: pointer;
 }
 
-@media (min-width: 768px) {
-    header.masthead {
-        /* padding-top: 12rem; */
-        padding-bottom: 4rem;
-    }
-    header.masthead h1 {
-        font-size: 3rem;
-    }
-}
-
 .description {
     padding-top: 4rem;
     position: relative;
 }
 
 .description:before {
-    content: "LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD";
     position: absolute;
     opacity: 0.05;
     font-family: AdihausDIN-Cn;
@@ -431,6 +432,7 @@ header.masthead .arrow {
 }
 
 .description .description-text h1 {
+    font-family: 'AdihausDIN-CondMedium';
     padding-top: 1rem;
     font-size: 35px;
     font-weight: bold;
@@ -459,11 +461,6 @@ header.masthead .arrow {
 
 .description .description-img {
     position: relative;
-    top: 0;
-    left: 0;
-    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    border: 4px solid #f8f8f8;
-    box-sizing: border-box;
 }
 
 .description .description-img.objetives {
@@ -471,20 +468,13 @@ header.masthead .arrow {
 }
 
 .description .description-img .tryouts {
-    width: 100%;
-    height: 20em;
-    background-image: url("../img/tryouts.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #464646;
+    max-width: 550px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
 }
 
 .description .description-img .city {
-    background-image: url("../img/bogot.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
     width: 100%;
     height: 8em;
     position: absolute;
@@ -493,69 +483,35 @@ header.masthead .arrow {
 }
 
 .description .description-img .training {
-    width: 100%;
-    height: 20em;
-    background-image: url("../img/training.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #464646;
+    max-width: 550px;
 }
 
 .description .description-img .k {
-    background-image: url("../img/42-k.png");
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100%;
-    height: 8em;
     position: absolute;
     top: 0.80rem;
     left: 1.6rem;
 }
 
 .description .description-img .objetive-1 {
-    width: 38em;
-    height: 18em;
-    background-image: url("../img/group-10.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
     bottom: 0;
     left: 2em;
-    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    border: 4px solid #f8f8f8;
-    z-index: 1;
+    z-index: 3;
+    max-width: 305px;
 }
 
 .description .description-img .objetive-2 {
-    width: 20em;
-    height: 12em;
-    background-image: url("../img/group-11.png");
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: contain;
     position: absolute;
     top: 0;
-    left: 19em;
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    border: 4px solid #f8f8f8;
     z-index: 2;
 }
 
 .description .description-img .objetive-3 {
-    width: 18em;
-    height: 30em;
-    background-image: url("../img/group-12.png");
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: contain;
     position: absolute;
     top: -76px;
     left: -40px;
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    border: 4px solid #f8f8f8;
-    z-index: 3;
+    z-index: 1;
 }
 
 @media (min-width: 1280px) {
@@ -703,14 +659,14 @@ header.masthead .arrow {
     color: #101010;
 }
 
-@media (min-device-width: 320px) and (max-device-width: 700px) {
+@media (min-device-width: 360px) and (max-device-width: 700px) {
     .map .map-image .timeline {
         list-style-type: none;
         display: block;
     }
     .map .map-image .li {
         transition: all 200ms ease-in;
-        display: flex;
+        display: inline;
         width: inherit;
     }
     .map .map-image .status:before {
@@ -771,7 +727,7 @@ header.masthead .arrow {
 }
 
 .form .container .title {
-    border-bottom: 1px solid #101010;
+    border-bottom: 1px solid #f26b32;
     margin-bottom: 1em;
 }
 
@@ -821,7 +777,7 @@ header.masthead .arrow {
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.09;
+    line-height: 1.5;
     letter-spacing: normal;
     text-align: center;
     color: #fafafa;
@@ -877,11 +833,6 @@ header.masthead .arrow {
     padding-top: 2em;
 }
 
-.form .container-success .logo-buttom {
-    width: 100%;
-    height: 15.2rem;
-}
-
 .form .container-success .d-flex {
     position: relative;
 }
@@ -916,21 +867,720 @@ header.masthead .arrow {
     margin-bottom: 0;
 }
 
-.call-to-action {
-    position: relative;
-    background-color: #343a40;
-    background: url("../img/bg-masthead.jpg") no-repeat center center;
-    background-size: cover;
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+.slide-left {
+    -webkit-animation: slide-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-.call-to-action .overlay {
-    position: absolute;
-    background-color: #212529;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0.3;
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media only screen and (min-width: 360px) {
+    /* Header */
+    header.masthead {
+        background: url("../img/bg-textura-mobile.png") center center no-repeat;
+        background-size: cover;
+        padding-bottom: 4rem;
+    }
+    header.masthead .aviones {
+        display: none;
+    }
+    header.masthead .arrow {
+        right: .2rem;
+        transform: translate(0, 80%);
+    }
+    header.masthead .col-xl-3 {
+        padding-top: 3rem;
+        padding-right: 0;
+        text-align: center;
+        vertical-align: middle;
+        padding-left: 0;
+    }
+    header.masthead .logo {
+        width: 100%;
+        height: 67px;
+        background-image: url("../img/logos-speed-runner.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    header.masthead .col-xl-3 .container {
+        transform: translateY(280px);
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    header.masthead .col-xl-3 .container .btn-dark {
+        margin-top: 1rem;
+    }
+    header.masthead .col-xl-7 {
+        padding-top: 4rem;
+        padding-right: 0;
+        padding-left: 0;
+        transform: translateY(-80px);
+    }
+    header.masthead .video-thumbnail {
+        border: none;
+    }
+    header.masthead .video-thumbnail .youtube .play {
+        margin-left: -68px;
+        margin-top: -50px;
+    }
+    header.masthead .video-thumbnail iframe,
+    header.masthead .video-thumbnail object,
+    header.masthead .video-thumbnail embed {
+        max-width: 100%;
+        display: block;
+        height: inherit;
+    }
+    /* Description */
+    .description::before {
+        content: "LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO";
+        font-size: 30px;
+    }
+    .description .description-item h1 {
+        font-size: 48px;
+    }
+    .description .description-item p {
+        font-size: 20px;
+    }
+    .description .description-img .tryouts {
+        max-width: 100%;
+    }
+    .description .description-img .city {
+        max-width: 251px;
+        left: 2rem;
+    }
+    .description .description-img .city img {
+        max-width: 100%;
+    }
+    .description .description-img .tryouts img,
+    .description .description-img .training img {
+        max-width: 100%;
+    }
+    .description .description-text {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-bottom: 1rem;
+    }
+    .description .description-text h1 {
+        font-size: 30px;
+    }
+    .description .description-text p {
+        font-size: 18px;
+    }
+    .description .col-description {
+        padding: 0;
+        padding-top: 1rem;
+    }
+    .description .col-description.col-description-2 {
+        transform: none;
+    }
+    .description .description-img .training img {
+        height: 360px;
+    }
+    .description .description-img .k {
+        max-width: 136px;
+        top: 1rem;
+        left: 2rem;
+    }
+    .description .description-img .k img {
+        max-width: 100%;
+    }
+    .description .container-fluid .last-description {
+        margin-bottom: 0;
+        padding-bottom: 2em;
+    }
+    .description .col-description-2 .description-text p {
+        font-size: 22px;
+    }
+    .description .col-description.col-description-3 {
+        transform: none;
+    }
+    .description .description-img.objetives {
+        padding-top: 9rem;
+    }
+    .description .description-img .objetive-1 {
+        position: absolute;
+        left: initial;
+        margin: auto;
+        border: solid 3px #fafafa;
+        box-sizing: border-box;
+        position: relative;
+    }
+    .description .description-img .objetive-1 img {
+        max-width: 100%;
+        display: block;
+    }
+    .description .description-img .objetive-2 {
+        max-width: 193px;
+        right: 0;
+        margin-right: 30px;
+        top: 10px;
+    }
+    .description .description-img .objetive-2 img {
+        max-width: 100%;
+        display: block;
+    }
+    .description .description-img .objetive-3 {
+        max-width: 113px;
+        top: 0;
+        left: 33px;
+    }
+    .description .description-img .objetive-3 img {
+        max-width: 100%;
+        display: block;
+    }
+    .description .container-fluid .last-description .description-text {
+        margin-left: 0;
+    }
+    .description .col-description-3 .description-text .container {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .description .description-text .col-md-12 {
+        padding-left: 1em;
+        padding-top: 1em;
+    }
+    .map {
+        padding-top: 1.5rem;
+    }
+    .map .container {
+        padding-bottom: 1.5rem;
+    }
+    .map .container h1 {
+        font-size: 28px;
+        line-height: 0.9;
+    }
+    .map .map-image {
+        height: 560px;
+    }
+    .map .map-image .timeline {
+        border-top: none;
+        padding-left: 5rem;
+    }
+    .map .map-image .li {
+        float: left;
+        /* padding-top: 4em;
+        margin-bottom: 2em;
+        margin-top: -90px; */
+        border-left: 3px solid #f26b32;
+    }
+    .map .map-image .li:first-child {
+        padding-top: 4em;
+        margin-top: -90px;
+    }
+    .map .map-image .li:nth-last-child(1) {
+        padding-bottom: 4em !important;
+    }
+    .map .map-image .li.full {
+        padding-bottom: 0;
+    }
+    .map .map-image .status {
+        padding: 0px 3em;
+        padding-left: 2em;
+    }
+    .map .map-image .status h1 {
+        font-size: 38px;
+    }
+    .map .map-image .status::before {
+        top: 48%;
+        left: -11%;
+        width: 30px;
+        height: 30px;
+    }
+    .map .map-image .status.status-last::before {
+        top: 48%;
+        left: -16px;
+        width: 30px;
+        height: 30px;
+    }
+    .map .map-image .info {
+        text-align: left;
+        padding-left: 2rem;
+    }
+    .map .map-image .info.space .px-3 {
+        padding-left: 0 !important;
+    }
+    /* Form */
+    .form {
+        padding-top: 11rem;
+    }
+    .form::before {
+        width: 730px;
+        top: 7em;
+        left: -17.5em;
+        background-image: url("../img/aviones-form.png");
+        opacity: 1;
+    }
+    .form .container.container-incription::before,
+    .form .container.container-success::before {
+        content: "";
+        width: 100%;
+        height: 184px;
+        background-image: url("../img/bg-formulario.png");
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+        position: absolute;
+        top: 5px;
+        right: 0;
+    }
+    .form .container .inputs {
+        padding: 2em;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+    .form .container h1 {
+        font-size: 46px;
+    }
+    .form .container .title {
+        margin-left: 1.6rem;
+        margin-right: 1.6rem;
+    }
+    .form .form-row-space {
+        padding-bottom: 0rem;
+    }
+    .form .form-group {
+        margin-bottom: 2.5rem;
+    }
+    .form .form-group.form-radio {
+        margin-top: -2rem;
+    }
+    .form .form-group>.float-label-2 {
+        transform: translate(1.2rem, 0.6rem);
+    }
+    .form .container .terms {
+        margin-top: -50px;
+    }
+    .form .terms .form-group {
+        margin-bottom: 0rem;
+    }
+    .form .terms .form-check {
+        padding-left: 0rem;
+        height: 5rem;
+    }
+    .form .terms .form-check label.newsletter a {
+        text-align: right;
+    }
+    .form .data-table {
+        padding-top: 2rem;
+    }
+    .form .container .title.title-data {
+        margin: 0;
+    }
+    .form .container .title.title-data h1 {
+        height: initial;
+        padding-bottom: 0.2rem;
+        line-height: 2.5rem;
+    }
+    .form .information .data .container .row {
+        margin-left: -35px;
+        margin-right: -35px;
+    }
+    .form .information .data .container .col-sm-3 {
+        width: 50%;
+    }
+    .form .information .data .container .col-sm-3 .btn-block {
+        max-width: 130px;
+    }
+    .form .information .data .container .col-sm-3 .btn {
+        padding-top: 0.60rem;
+    }
+    .form .container-success {
+        padding: 2em;
+        margin-top: -3em;
+    }
+    .form .container-success .logo-bottom {
+        width: 100%;
+        height: 109px;
+        background-image: url("../img/logos-speed-runner.png");
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+        position: relative;
+    }
+    .form .container-success .d-flex {
+        padding-top: 3em;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    .form .container-success .d-flex .success-title,
+    .form .container-success .d-flex .success-message {
+        font-size: 28px;
+    }
+    @-webkit-keyframes slide-left {
+        0% {
+            -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+        }
+        100% {
+            -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+        }
+    }
+    @keyframes slide-left {
+        0% {
+            -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+        }
+        100% {
+            -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+        }
+    }
+}
+
+@media only screen and (min-width: 414px) {
+    .description .description-img .objetive-3 {
+        max-width: 140px;
+    }
+    .form .container.container-incription::before,
+    .form .container.container-success::before {
+        height: 200px;
+        top: 6px;
+    }
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+    header.masthead {
+        background: url("../img/bg-textura.png") center center no-repeat;
+        background-size: cover;
+        padding-bottom: 4rem;
+    }
+    header.masthead h1 {
+        font-size: 3rem;
+    }
+    .description .description-img .training {
+        max-width: 100%;
+    }
+    .description .description-img .training img {
+        height: auto;
+    }
+    .map .container h1 {
+        font-size: 45px;
+        line-height: 0.9;
+    }
+    .form .information .data .container .col-sm-3 .btn-block {
+        max-width: 100%;
+    }
+    .form .information .data .container .col-sm-3 .btn {
+        padding-top: 0.55rem;
+    }
+    @-webkit-keyframes slide-left {
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        100% {
+            -webkit-transform: translateX(-700px);
+            transform: translateX(-700px);
+        }
+    }
+    @keyframes slide-left {
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+        100% {
+            -webkit-transform: translateX(-700px);
+            transform: translateX(-700px);
+        }
+    }
+}
+
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+    header.masthead .logo {
+        width: 100%;
+        height: 234px;
+        margin-left: 700px;
+        background-image: url("../img/logo.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .map .container h1 {
+        font-size: 65px;
+        line-height: 0.9;
+    }
+    .form::before {
+        width: 53em;
+        background-image: url("../img/aviones.png");
+        top: -6em;
+        left: -9.2em;
+        opacity: 0.2;
+    }
+    .form .container.container-incription::before,
+    .form .container.container-success::before {
+        content: "";
+        width: 34em;
+        height: 87em;
+        background-image: url("../img/formulario-bg-ripped.png");
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+        position: absolute;
+        top: 0;
+        right: -6em;
+    }
+}
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {
+    /* Header */
+    header.masthead {
+        padding-top: 6rem;
+    }
+    header.masthead .aviones {
+        display: initial;
+    }
+    header.masthead .col-xl-3 {
+        padding-top: 0;
+    }
+    header.masthead .col-xl-3 .container {
+        transform: none;
+        padding: 0;
+        width: 286px;
+    }
+    header.masthead .col-xl-3 .container .btn-dark {
+        margin-top: 6rem;
+    }
+    header.masthead .col-xl-7 {
+        padding-top: 0;
+        padding-right: 0;
+        margin-top: -2rem;
+        transform: none;
+    }
+    header.masthead .video-thumbnail {
+        height: 424px;
+        max-width: 100%;
+        border: solid 5px #fafafa;
+        border-right: none;
+        box-sizing: border-box;
+    }
+    header.masthead .video-thumbnail iframe,
+    header.masthead .video-thumbnail object,
+    header.masthead .video-thumbnail embed {
+        height: inherit;
+        max-width: 100%;
+        display: block;
+    }
+    header.masthead .arrow {
+        right: 4.7rem;
+        transform: translate(0, 50%);
+    }
+    /* Description */
+    .description {
+        padding-top: 3rem;
+    }
+    .description::before {
+        content: "LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD / LAS EXCUSAS / UN RELÁMPAGO / LA PRESIÓN / LO QUE PIENSAS / LO QUE PENSABAS / TU MEJOR TIEMPO / TU PROMEDIO / LO QUE ESPERABAS / LO QUE ESPERABAS / EL AYER / LO QUE ERAS / LO QUE ESPERAN / LO QUE PIENSAN / LO QUE CREEN POSIBLE / LA HISTORIA/ / LA DISCRIMINACIÓN / LOS LÍMITES / LA VELOCIDAD";
+        font-size: 35px;
+    }
+    .description .description-item h1 {
+        font-size: 70px;
+    }
+    .description .description-item p {
+        font-size: 30px;
+    }
+    .description .description-img .objetive-2 {
+        left: initial;
+    }
+    .description .container-fluid .row {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .description .col-description {
+        padding-top: 3rem;
+        padding-left: 6rem;
+        padding-right: 3rem;
+    }
+    .description .description-img .city {
+        max-width: 437px;
+        left: 1.6rem;
+    }
+    .description .description-text {
+        padding: 0;
+        padding-right: 3rem;
+    }
+    .description .description-text h1 {
+        font-size: 35px;
+    }
+    .description .description-text p {
+        font-size: 22px;
+    }
+    .description .col-description.col-description-2 {
+        transform: translate(-50px, -180px);
+    }
+    .description .col-description.col-description-3 {
+        padding-top: 10rem;
+    }
+    .description .description-img .training img {
+        height: auto;
+    }
+    .map .map-image .row {
+        margin-right: 0;
+    }
+    .description .description-img .k {
+        left: 1.5rem;
+    }
+    .description .description-img .k img {
+        max-width: 100%;
+        height: auto
+    }
+    .description .container-fluid .last-description {
+        transform: translateY(-200px);
+        margin-bottom: -172px;
+    }
+    .description .description-img.objetives {
+        padding-top: 0rem;
+    }
+    .description .description-img .objetive-1 {
+        height: auto;
+        max-width: 457px;
+        margin-bottom: 0.2em;
+        z-index: 2;
+        border: none;
+        left: 0;
+    }
+    .description .description-img .objetive-2 {
+        max-width: 317px;
+        right: 0;
+        margin-right: 30px;
+        top: 0;
+        transform: translate(80px, -224px);
+    }
+    .description .description-img .objetive-3 {
+        max-width: 220px;
+        top: 0;
+        left: 10px;
+        transform: translate(-25px, -276px);
+        z-index: 4;
+    }
+    .map {
+        padding-top: 2.5rem;
+    }
+    .map .container {
+        padding-bottom: 2.5rem;
+    }
+    .map .map-image {
+        height: 307px;
+    }
+    .map .map-image .timeline {
+        border-top: 3px solid #f26b32;
+        padding-left: 3em;
+        margin-right: -2rem;
+    }
+    .map .map-image .li {
+        border-left: none;
+        float: none;
+    }
+    .map .map-image .li.full {
+        padding-bottom: 2rem;
+    }
+    .map .map-image .li:first-child {
+        padding-top: initial;
+        margin-top: 0;
+    }
+    .map .map-image .status {
+        padding: 0px 6em;
+    }
+    .map .map-image .status::before {
+        top: -34%;
+        left: 45%;
+        width: 26px;
+        height: 26px;
+    }
+    .map .map-image .status.status-last::before {
+        top: -22%;
+        left: 45%;
+        width: 26px;
+        height: 26px;
+    }
+    .map .map-image .info {
+        padding-left: 6rem;
+    }
+    .form {
+        padding-top: 4rem;
+    }
+    .form .form-row-space {
+        padding-bottom: 1rem;
+    }
+    .form .container .inputs {
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+    .form .container h1 {
+        font-size: 65px;
+    }
+    .form .container .title {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .form .container .terms {
+        margin-top: -10px;
+    }
+    .form .form-group {
+        margin-bottom: 2.5rem;
+    }
+    .form .form-row.break {
+        margin-bottom: 1rem;
+    }
+    .form .container .inputs {
+        padding: 0rem;
+        padding-top: 2rem;
+    }
+    .form .terms .form-check {
+        padding-left: 0rem;
+        height: 2rem;
+    }
+    .form .container-success {
+        padding: 6em;
+        padding-top: 2em;
+    }
+    .form .container-success .logo-bottom {
+        width: 100%;
+        height: 15.2rem;
+        background-image: url("../img/logo.png");
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+        position: cover;
+    }
+    .form .container-success .d-flex .success-title {
+        font-size: 44px;
+    }
+}
+
+
+/* HD devices (large desktops, 1440px and up) */
+
+@media only screen and (min-width: 1440px) {
+    .description .col-description {
+        padding-left: 5rem;
+    }
+    .description .col-description.col-description-2 {
+        transform: translate(0, -180px);
+    }
+    .description .description-img .objetive-3 {
+        transform: translateY(-276px);
+    }
+    .description .description-img.objetives {
+        padding-top: 1rem;
+    }
+    .description .description-img .objetive-2 {
+        max-width: 356px;
+        transform: translate(58px, -224px);
+    }
+    .form .container.container-incription::before,
+    .form .container.container-success::before {
+        height: 90em;
+    }
 }

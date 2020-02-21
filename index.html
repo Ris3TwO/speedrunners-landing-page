@@ -26,20 +26,19 @@
     <!-- Masthead -->
     <header class="masthead text-white text-center">
         <div class="aviones"></div>
-        <div class="overlay"></div>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xl-3 offset-xl-1">
-                    <img class="logo img-fluid" src="img/logo.png" alt="">
+                <div class="col-xl-3 col-md-auto offset-xl-1">
+                    <div class="logo img-fluid slide-left"></div>
                     <div class="row justify-content-center">
                         <div class="container align-middle">
-                            <button class="btn btn-block btn-sm btn-dark">INSCRIBIRME</button>
+                            <button class="btn btn-block btn-dark">INSCRIBIRME</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-7 ml-auto">
                     <div class="video-thumbnail">
-                        <img src="./img/video-player.png" alt="Video thumbnail" />
+                        <div class="youtube" id="m6ciWfZt5JQ" src="./img/video-player.png"></div>
                     </div>
                 </div>
             </div>
@@ -62,11 +61,15 @@
             </div>
         </div>
         <div class="container-fluid p-0">
-            <div class="row no-gutters">
+            <div class="row">
                 <div class="col-description col-lg-6 order-lg-1 align-self-start my-auto ">
                     <div class="description-img">
-                        <div class="tryouts"></div>
-                        <div class="city"></div>
+                        <div class="tryouts">
+                            <img src="../img/tryouts.png" alt="">
+                        </div>
+                        <div class="city">
+                            <img src="../img/bogot.png" alt="">
+                        </div>
                     </div>
                     <div class="description-text">
                         <h1>TRYOUTS</h1>
@@ -74,11 +77,15 @@
                     </div>
                 </div>
             </div>
-            <div class="row no-gutters">
+            <div class="row">
                 <div class="col-description col-description-2 col-lg-6 offset-lg-6">
                     <div class="description-img">
-                        <div class="training"></div>
-                        <div class="k"></div>
+                        <div class="training">
+                            <img src="../img/training.png" alt="">
+                        </div>
+                        <div class="k">
+                            <img src="../img/42-k.png" alt="">
+                        </div>
                     </div>
                     <div class="description-text">
                         <h1>TRAINING</h1>
@@ -86,12 +93,18 @@
                     </div>
                 </div>
             </div>
-            <div class="row no-gutters last-description">
+            <div class="row last-description">
                 <div class="col-description col-description-3 col-lg-6 align-self-end my-auto ">
                     <div class="description-img objetives">
-                        <div class="objetive-1"></div>
-                        <div class="objetive-2"></div>
-                        <div class="objetive-3"></div>
+                        <div class="objetive-1">
+                            <img src="../img/group-10.png" alt="">
+                        </div>
+                        <div class="objetive-2">
+                            <img src="../img/group-11.png" alt="">
+                        </div>
+                        <div class="objetive-3">
+                            <img src="../img/group-12.png" alt="">
+                        </div>
                     </div>
                     <div class="description-text">
                         <div class="container">
@@ -143,7 +156,7 @@
                                 </div>
                             </li>
                             <li class="li complete full">
-                                <div class="status">
+                                <div class="status status-last">
                                     <h1>Kilometros</h1>
                                 </div>
                                 <div class="info space">
@@ -184,7 +197,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-row justify-content-around">
+                        <div class="form-row justify-content-around break">
                             <div class="form-group col-md-6">
                                 <label class="float-label" for="inputEmail">EMAIL</label>
                                 <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="">
@@ -192,16 +205,7 @@
                                     <small id="emailHelp" class="form-text">Falta registrar el email *</small>
                                 </div>
                             </div>
-                            <div class="form-group col-md-6">
-                                <label class="float-label" for="inputCity">CIUDAD</label>
-                                <input type="text" class="form-control" id="inputCity" aria-describedby="cityHelp" placeholder="">
-                                <div class="invalid-feedback">
-                                    <small id="cityHelp" class="form-text">Falta registrar la ciudad *</small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row justify-content-around">
-                            <div class="form-group col-md-6">
+                            <div class="form-group form-radio col-md-6">
                                 <label class="float-label-2" for="selectGender">GÉNERO</label>
                                 <div id="selectGender" class="btn-group btn-group-toggle" data-toggle="buttons">
                                     <label class="btn btn-light active">
@@ -215,7 +219,16 @@
                                     </label>
                                 </div>
                             </div>
-                            <div class="form-group col-md-6">
+                            <!-- <div class="form-group col-md-6">
+                                <label class="float-label" for="inputCity">CIUDAD</label>
+                                <input type="text" class="form-control" id="inputCity" aria-describedby="cityHelp" placeholder="">
+                                <div class="invalid-feedback">
+                                    <small id="cityHelp" class="form-text">Falta registrar la ciudad *</small>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="form-row justify-content-around break">
+                            <div class="form-group form-radio col-md-6">
                                 <label class="float-label-2" for="selectAge">EDAD</label>
                                 <div id="selectAge" class="btn-group btn-group-toggle" data-toggle="buttons">
                                     <label class="btn btn-light active">
@@ -235,9 +248,7 @@
                                     </label>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-row justify-content-around">
-                            <div class="form-group col-md-6">
+                            <div class="form-group form-radio col-md-6">
                                 <label class="float-label-2" for="selectShoes">ZAPATILLAS</label>
                                 <div id="selectShoes" class="btn-group btn-group-toggle" data-toggle="buttons">
                                     <label class="btn btn-light active">
@@ -251,7 +262,9 @@
                                     </label>
                                 </div>
                             </div>
-                            <div class="form-group col-md-6">
+                        </div>
+                        <div class="form-row justify-content-around break">
+                            <div class="form-group form-radio col-md-6">
                                 <label class="float-label-2" for="selectTeam">TEAM</label>
                                 <div id="selectTeam" class="btn-group btn-group-toggle" data-toggle="buttons">
                                     <label class="btn btn-light active">
@@ -262,13 +275,11 @@
                                     </label>
                                 </div>
                             </div>
-                            <div class="form-group col-md-6 mt-auto col-inactive">
+                            <div class="form-group form-radio col-md-6 mt-auto col-inactive">
                                 <label class="float-label" for="inputTeam">TEAM</label>
                                 <input type="text" class="form-control" id="inputTeam" placeholder="">
                             </div>
-                        </div>
-                        <div class="form-row justify-content-around">
-                            <div class="form-group col-md-6">
+                            <div class="form-group form-radio col-md-6">
                                 <label class="float-label-2" for="exampleInputEmail1">DISTANCIA</label>
                                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                     <label class="btn btn-light active">
@@ -282,7 +293,9 @@
                                     </label>
                                 </div>
                             </div>
-                            <div class="form-group col-md-6">
+                        </div>
+                        <div class="form-row justify-content-around">
+                            <div class="form-group form-radio col-md-12">
                                 <label class="float-label-2" for="exampleInputEmail1">MI MEJOR TIEMPO</label>
                                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                     <label class="btn btn-light active">
@@ -303,7 +316,7 @@
                             <div class="form-group col-md-12">
                                 <div class="form-check">
                                     <input id="terms" type="checkbox">
-                                    <label for="terms">Acepto <a href="#">términos</a> y <a href="#">condiciones</a>.</label>
+                                    <label class="terms_conditions" for="terms">Acepto <a href="#">términos</a> y <a href="#">condiciones</a>.</label>
                                     <span></span>
                                 </div>
                                 <div class="form-check">
@@ -338,24 +351,22 @@
                                         <tr>
                                             <td class="form-title">Email:</td>
                                             <td>jcortiz@gmail.com</td>
-                                            <td class="form-title">Ciudad:</td>
-                                            <td>Bogotá</td>
-                                        </tr>
-                                        <tr>
                                             <td class="form-title">Género:</td>
                                             <td>Hombre</td>
+                                        </tr>
+                                        <tr>
                                             <td class="form-title">Edad:</td>
                                             <td>35 - 40</td>
-                                        </tr>
-                                        <tr>
                                             <td class="form-title">Zapatillas:</td>
                                             <td>Adidas</td>
-                                            <td class="form-title">Team:</td>
-                                            <td>Pretoria Survivors</td>
                                         </tr>
                                         <tr>
+                                            <td class="form-title">Team:</td>
+                                            <td>Pretoria Survivors</td>
                                             <td class="form-title">Distancia:</td>
                                             <td>10K</td>
+                                        </tr>
+                                        <tr>
                                             <td class="form-title">Tiempo:</td>
                                             <td>90 MIN</td>
                                         </tr>
@@ -364,10 +375,10 @@
                             </div>
                             <div class="container">
                                 <div class="row justify-content-center">
-                                    <div class="col-md-5">
+                                    <div class="col-sm-3 col-md-5">
                                         <button type="button" class="btn btn-light btn-lg btn-block">Modificar</button>
                                     </div>
-                                    <div class="col-md-5">
+                                    <div class="col-sm-3 col-md-5">
                                         <button type="button" class="btn btn-dark btn-lg btn-block">Guardar</button>
                                     </div>
                                 </div>
@@ -384,7 +395,7 @@
                 <div class="col-lg-12">
                     <div class="row justify-content-center text-left">
                         <div class="col-lg-4">
-                            <img class="logo-buttom" src="./img/logo.png" alt="Adidas Speed Runners" srcset="">
+                            <div class="logo-bottom"></div>
                         </div>
                         <div class="col-lg-8 d-flex align-items-center">
                             <div>
@@ -402,6 +413,50 @@
 
     <script src="./vendor/jquery/jquery.min.js "></script>
     <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
+
+    <script>
+        var i, c, y, v, s, n;
+        var im = new Array();
+        v = document.getElementsByClassName("youtube");
+
+        for (n = 0; n < v.length; n++) {
+            im[n] = v[n].hasAttribute("src") ? v[n].getAttribute("src") : "http://i.ytimg.com/vi/" + v[n].id + "/hqdefault.jpg";
+        }
+
+        if (v.length > 0) {
+            s = document.createElement("style");
+            s.type = "text/css";
+            s.innerHTML = '.youtube{background-color:#000;max-width:100%;overflow:hidden;position:relative;cursor:hand;cursor:pointer}.youtube .thumb{bottom:0;display:block;left:0;margin:auto;max-width:100%;position:absolute;right:0;top:0;width:100%;height:auto}.youtube .play{filter:alpha(opacity=80);opacity:.8;height:77px;left:50%;margin-left:-38px;margin-top:-38px;position:absolute;top:50%;width:77px;background:url("https://lh3.ggpht.com/vo4W82YNfpJDsttqn-22YsLtEJjmOtIB-54yIxR5wQA0Ucs5leNIu-W8iEmyY8-Pf7RWHk4=w64") no-repeat}';
+            document.body.appendChild(s);
+        }
+
+        for (n = 0; n < v.length; n++) {
+            y = v[n];
+            i = document.createElement("img");
+            i.setAttribute("src", im[n]);
+            i.setAttribute("class", "thumb");
+            c = document.createElement("div");
+            c.setAttribute("class", "play");
+            y.appendChild(i);
+            y.appendChild(c);
+            y.onclick = function() {
+                var t = document.createElement("iframe");
+                t.setAttribute("src", "https://www.youtube.com/embed/" + this.id + param(this));
+                t.style.width = this.style.width;
+                t.style.height = this.style.height;
+                this.parentNode.replaceChild(t, this);
+            }
+        };
+
+        function param(x) {
+            if (x.getAttribute("data-params") !== null) {
+                return x.getAttribute("data-params");
+            } else {
+                return "?autoplay=1";
+
+            }
+        }
+    </script>
 
 </body>
 
