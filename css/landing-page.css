@@ -1306,7 +1306,7 @@ header.masthead .arrow {
 
 /* Medium devices (tablets, 768px and up) */
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     header.masthead {
         background: url("../img/bg-textura.png") center center no-repeat;
         background-size: cover;
@@ -1488,12 +1488,17 @@ header.masthead .arrow {
 
 /* Large devices (desktops, 992px and up) */
 
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
     .row {
         margin-right: -15px;
     }
     header.masthead .logo {
         margin-left: 700px;
+    }
+    .description .description-img .k {
+        max-width: 188px;
+        top: 1rem;
+        left: 2rem;
     }
     .map .container h1 {
         font-size: 65px;
