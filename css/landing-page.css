@@ -38,6 +38,8 @@ h6 {
 
 .btn {
     border-radius: 0 !important;
+    padding: .50rem .75rem;
+    -webkit-appearance: none;
 }
 
 .btn-dark {
@@ -335,6 +337,7 @@ header.masthead .video-thumbnail .youtube .play:before {
     border-style: solid;
     border-radius: 50%;
     background-color: rgba(216, 216, 216, 0.55);
+    -webkit-appearance: none;
 }
 
 header.masthead .video-thumbnail .youtube .play:hover::before {
@@ -523,7 +526,6 @@ header.masthead .arrow {
 .description .description-img .objetive-3 {
     position: absolute;
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    border: 4px solid white;
 }
 
 @media (min-width: 1280px) {
@@ -929,7 +931,13 @@ header.masthead .arrow {
 /* Small devices (landscape phones, 360px and up) */
 
 @media only screen and (min-width: 360px) {
+    .btn {
+        padding: .375rem .75rem;
+    }
     /* Header */
+    .youtube .play {
+        opacity: 1;
+    }
     header.masthead {
         background: url("../img/bg-textura-mobile.png") center center no-repeat;
         background-size: cover;
@@ -1029,9 +1037,6 @@ header.masthead .arrow {
     .description .col-description.col-description-2 {
         transform: none;
     }
-    .description .description-img .training img {
-        height: 360px;
-    }
     .description .description-img .k {
         max-width: 136px;
         top: 1rem;
@@ -1057,7 +1062,6 @@ header.masthead .arrow {
         position: absolute;
         left: initial;
         margin: auto;
-        border: solid 3px #fafafa;
         box-sizing: border-box;
         position: relative;
     }
@@ -1069,7 +1073,7 @@ header.masthead .arrow {
         max-width: 193px;
         right: 0;
         margin-right: 30px;
-        top: 10px;
+        top: 50px;
     }
     .description .description-img .objetive-2 img {
         max-width: 100%;
@@ -1077,8 +1081,8 @@ header.masthead .arrow {
     }
     .description .description-img .objetive-3 {
         max-width: 113px;
-        top: 0;
-        left: 33px;
+        top: 24px;
+        left: 26px;
     }
     .description .description-img .objetive-3 img {
         max-width: 100%;
@@ -1163,8 +1167,8 @@ header.masthead .arrow {
         width: 730px;
         top: 7em;
         left: -17.5em;
-        background-image: url("../img/aviones-form.png");
-        opacity: 1;
+        background-image: url("../img/aviones.png");
+        opacity: 0.2;
     }
     .form .container.container-incription::before,
     .form .container.container-success::before {
@@ -1252,6 +1256,10 @@ header.masthead .arrow {
         padding: 2em;
         margin-top: -3em;
     }
+    .form .terms .submit .col-md-6 {
+        padding-right: 0;
+        padding-left: 0;
+    }
     .form .container-success .logo-bottom {
         width: 100%;
         height: 109px;
@@ -1272,22 +1280,22 @@ header.masthead .arrow {
     }
     @-webkit-keyframes slide-left {
         0% {
-            -webkit-transform: translateY(100px);
-            transform: translateY(100px);
+            -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
         }
         100% {
-            -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+            -webkit-transform: translateX(0px);
+            transform: translateX(0px);
         }
     }
     @keyframes slide-left {
         0% {
-            -webkit-transform: translateY(100px);
-            transform: translateY(100px);
+            -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
         }
         100% {
-            -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+            -webkit-transform: translateX(0px);
+            transform: translateX(0px);
         }
     }
 }
@@ -1307,6 +1315,9 @@ header.masthead .arrow {
 /* Medium devices (tablets, 768px and up) */
 
 @media only screen and (min-width: 768px) {
+    .youtube .play {
+        opacity: 0.8;
+    }
     header.masthead {
         background: url("../img/bg-textura.png") center center no-repeat;
         background-size: cover;
@@ -1463,24 +1474,28 @@ header.masthead .arrow {
     .form .container .data .row.datatable .col-md-11 {
         padding-left: 3rem;
     }
+    .form .terms .submit .col-md-6 {
+        padding-right: initial;
+        padding-left: initial;
+    }
     @-webkit-keyframes slide-left {
         0% {
-            -webkit-transform: translateY(360px);
-            transform: translateY(360px);
+            -webkit-transform: translateX(-360px);
+            transform: translateX(-360px);
         }
         100% {
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
         }
     }
     @keyframes slide-left {
         0% {
-            -webkit-transform: translateY(360px);
-            transform: translateY(360px);
+            -webkit-transform: translateX(-360px);
+            transform: translateX(-360px);
         }
         100% {
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
         }
     }
 }
@@ -1488,12 +1503,9 @@ header.masthead .arrow {
 
 /* Large devices (desktops, 992px and up) */
 
-@media only screen and (min-width: 992px) {
-    .row {
-        margin-right: -15px;
-    }
-    header.masthead .logo {
-        margin-left: 700px;
+@media only screen and (min-width: 1024px) {
+    .btn {
+        padding: .50rem .75rem;
     }
     .description .description-img .k {
         max-width: 188px;
@@ -1526,22 +1538,22 @@ header.masthead .arrow {
     }
     @-webkit-keyframes slide-left {
         0% {
-            -webkit-transform: translateX(0);
-            transform: translateX(0);
-        }
-        100% {
             -webkit-transform: translateX(-700px);
             transform: translateX(-700px);
+        }
+        100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
         }
     }
     @keyframes slide-left {
         0% {
-            -webkit-transform: translateX(0);
-            transform: translateX(0);
-        }
-        100% {
             -webkit-transform: translateX(-700px);
             transform: translateX(-700px);
+        }
+        100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
         }
     }
 }
@@ -1632,6 +1644,9 @@ header.masthead .arrow {
     .description .description-text p {
         font-size: 22px;
     }
+    .description .description-text .col-md-12 {
+        padding-left: 3em;
+    }
     .description .col-description.col-description-2 {
         transform: translate(-50px, -180px);
     }
@@ -1709,13 +1724,20 @@ header.masthead .arrow {
         padding: 0px 6em;
     }
     .map .map-image .status::before {
-        top: -34%;
+        top: -26%;
         left: 45%;
         width: 26px;
         height: 26px;
     }
+    .map .map-image .li:nth-last-child(2) {
+        margin-top: initial;
+    }
+    .map .map-image .full .status::before {
+        top: -25%;
+        left: 45%;
+    }
     .map .map-image .status.status-last::before {
-        top: -22%;
+        top: -28%;
         left: 45%;
         width: 26px;
         height: 26px;
@@ -1805,5 +1827,150 @@ header.masthead .arrow {
     .form .container.container-incription::before,
     .form .container.container-success::before {
         height: 90em;
+    }
+}
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-2-23 12:2:9
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+
+/**
+ * ----------------------------------------
+ * animation slide-left
+ * ----------------------------------------
+ */
+
+.slidelerlu {
+    -webkit-animation: slidelerlu 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slidelerlu 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slideler {
+    -webkit-animation: slideler 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slideler 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slideler1 {
+    -webkit-animation: slideler 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slideler 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slideler2 {
+    -webkit-animation: slideler 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slideler 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slideler3 {
+    -webkit-animation: slideler 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slideler 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slideler {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(-100px);
+        transform: translateX(-100px);
+    }
+}
+
+@keyframes slideler {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(-100px);
+        transform: translateX(-100px);
+    }
+}
+
+@-webkit-keyframes slidelerlu {
+    0% {
+        -webkit-transform: translateX(-810px);
+        transform: translateX(-810px);
+    }
+    100% {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+}
+
+@keyframes slidelerlu {
+    0% {
+        -webkit-transform: translateX(-810px);
+        transform: translateX(-810px);
+    }
+    100% {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+}
+
+.tracking-in-expand {
+    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1.5s both;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1.5s both;
+}
+
+.tracking-in-expand2 {
+    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 2s both;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 2s both;
+}
+
+.tracking-in-expand3 {
+    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 2.5s both;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 2.5s both;
+}
+
+.tracking-in-expand4 {
+    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 3s both;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 3s both;
+}
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-2-23 12:31:15
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+
+/**
+ * ----------------------------------------
+ * animation tracking-in-expand
+ * ----------------------------------------
+ */
+
+@-webkit-keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
     }
 }
